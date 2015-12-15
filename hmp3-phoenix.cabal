@@ -1,0 +1,54 @@
+name:                hmp3-phoenix
+version:             0.1.0.0
+synopsis:            Simple project template from stack
+description:         Please see README.md
+homepage:            http://github.com/danplubell/hmp3-phoenix#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Dan Plubell
+maintainer:          danplubell@gmail.com
+copyright:           2015 Dan Plubell
+category:            Other
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  Keymap.hs-boot README TODO configure configure.ac
+                     cbits/config.h.in ./cbits/utils.h ./cbits/utils.c
+                     
+                     
+executable phmp3
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , bytestring
+                     , containers
+                     , array
+                     , old-time
+                     , directory
+                     , process
+                     , unix
+                     , zlib
+                     , binary
+                     , pcre-light
+                     , mersenne-random
+  ghc-options:       -Wall -funbox-strict-fields -threaded
+  default-extensions:        CPP, ForeignFunctionInterface
+  other-modules:     
+                     Core
+                     Curses
+                     FastIO 
+                     Lexer
+                     Lexers
+                     State
+                     Syntax
+                     Tree
+                     Utils
+                     Style
+                     UI
+                     Keymap
+                     UI
+                     Config
+                     Paths_hmp3_phoenix
+  extra-libraries:   curses
+  include-dirs:      src/cbits
+  c-sources:         src/cbits/utils.c

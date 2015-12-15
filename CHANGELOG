@@ -1,0 +1,4 @@
+Switched to using Stack for the build tool
+Switched to the Haskell2010 version of exceptions
+Switched to using the newer version of getPermissions and getDirectoryContents
+

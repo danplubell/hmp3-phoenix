@@ -1,0 +1,7 @@
+flags: {}
+extra-package-dbs: []
+packages:
+- '.'
+extra-deps:
+- mersenne-random-1.0.0.1
+resolver: lts-3.10
